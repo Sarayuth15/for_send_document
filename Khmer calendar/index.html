@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khmer Date (Khmer Luna Calendar)</title>
+    <link rel="stylesheet" href="style/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>ប្រតិទិនខ្មែរ</h1>
+
+    <label for="month">ខែ:</label>
+    <select id="month">
+        <option value="0">មករា</option>
+        <option value="1">កុម្ភៈ</option>
+        <option value="2">មិនា</option>
+        <option value="3">មេសា</option>
+        <option value="4">ឧសភា</option>
+        <option value="5">មិថុនា</option>
+        <option value="6">កក្កដា</option>
+        <option value="7">សីហា</option>
+        <option value="8">កញ្ញា</option>
+        <option value="9">តុលា</option>
+        <option value="10">វិច្ឆិកា</option>
+        <option value="11">ធ្នូ</option>
+    </select>
+
+    <label for="year">ឆ្នាំ:</label>
+    <select id="year"></select>
+
+    <br><br>
+    <div class="calendar">
+        <table>
+            <thead>
+                <tr>
+                    <th>អាទិត្យ</th>
+                    <th>ច័ន្ទ</th>
+                    <th>អង្គារ</th>
+                    <th>ពុធ</th>
+                    <th>ព្រហស្បតិ៍</th>
+                    <th>សុក្រ</th>
+                    <th>សៅរ៍</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+        </table>
+    </div>
+
+
+    <script src="script/index.js"></script>
+</body>
+
+</html>
