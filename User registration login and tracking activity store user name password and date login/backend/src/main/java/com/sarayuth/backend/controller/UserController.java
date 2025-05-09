@@ -21,9 +21,14 @@ public class UserController {
 
     // Get all user endpoint
     @GetMapping("/users")
-    public ResponseEntity<String> getAllUsers() {
-        String result = service.getAllUsers();
-        return ResponseEntity.ok(result);
+    public List<User> getAllUsers() {
+        return service.getAllUsers();
+    }
+
+    // Get all user have login endpoint
+    @GetMapping("/logins")
+    public List<LoginHistory> getAllLogins() {
+        return service.getAllLogins();
     }
 
     // Register endpoint

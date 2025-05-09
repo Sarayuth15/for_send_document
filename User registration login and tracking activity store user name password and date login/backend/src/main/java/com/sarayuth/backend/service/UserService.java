@@ -21,12 +21,13 @@ public class UserService {
     }
 
     // Find all user
-    public String getAllUsers() {
-        List<User> users = userRepo.findAll();
-        if (users == null || users.isEmpty()) {
-            return "No users found.";
-        }
-        return users.toString();
+    public List<User> getAllUsers() {
+        return userRepo.findAll();
+    }
+
+    // Find all user that have login
+    public List<LoginHistory> getAllLogins() {
+        return loginRepo.findAll();
     }
 
     // Register a new user
