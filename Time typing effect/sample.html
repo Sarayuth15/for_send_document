@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        secondary: '#4F4FC7',
+                        light: '#FFFFFF',
+                        dark: '#181818',
+                        darkgray: '#333333',
+                        lightgray: '#F5F5F5'
+                    },
+                }
+            }
+        }
+
+        // Check for dark mode preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+
+        /* Progress bar animation */
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: var(--progress-width);
+            }
+        }
+
+        .progress-bar {
+            animation: progress 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-light dark:bg-dark text-darkgray dark:text-lightgray transition-colors duration-300">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-darkgray bg-opacity-90 dark:bg-opacity-90 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-primary">
+                <a href="#" class="flex items-center gap-2">
+                    <span class="text-3xl font-semibold">Portfolio</span>
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="menu-toggle" class="md:hidden text-darkgray dark:text-light">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex gap-6">
+                <a href="#home" class="font-medium hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="font-medium hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="font-medium hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="font-medium hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="font-medium hover:text-primary transition-colors">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden px-4 py-4 bg-white dark:bg-darkgray md:hidden">
+            <div class="flex flex-col gap-4">
+                <a href="#home" class="font-medium hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="font-medium hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="font-medium hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="font-medium hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="font-medium hover:text-primary transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col-reverse md:flex-row items-center">
+                <div class="md:w-1/2 mt-10 md:mt-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 fade-in">
+                        Hi, I'm <span class="text-primary">Your Name</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 fade-in delay-100">
+                        <span class="typing-text">Web Developer</span>
+                    </h2>
+                    <p class="text-lg mb-8 opacity-90 max-w-md fade-in delay-200">
+                        I create responsive web applications with modern technologies and focus on delivering
+                        exceptional user experiences.
+                    </p>
+                    <div class="flex gap-4 fade-in delay-300">
+                        <a href="#contact"
+                            class="px-6 py-3 bg-primary hover:bg-secondary text-white rounded-lg transition-colors">
+                            Contact Me
+                        </a>
+                        <a href="#projects"
+                            class="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg transition-colors">
+                            View My Work
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in">
+                    <div
+                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-primary bg-opacity-10 flex items-center justify-center overflow-hidden">
+                        <!-- Profile picture placeholder -->
+                        <div
+                            class="w-full h-full bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-7xl text-gray-400 dark:text-gray-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-lightgray dark:bg-darkgray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">
+                About <span class="text-primary">Me</span>
+            </h2>
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2 fade-in delay-100">
+                    <h3 class="text-2xl font-semibold mb-4">My Background</h3>
+                    <p class="mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                    </p>
+
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-semibold mb-4">Education</h3>
+                        <div class="mb-4">
+                            <h4 class="text-xl font-medium">Bachelor of Science in Computer Science</h4>
+                            <p class="text-gray-600 dark:text-gray-400">University Name, 2018-2022</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-medium">Web Development Bootcamp</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Code Institute, 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 fade-in delay-200">
+                    <h3 class="text-2xl font-semibold mb-4">Experience</h3>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <h4 class="text-xl font-medium">Senior Web Developer</h4>
+                            <span class="text-sm text-gray-600 dark:text-gray-400">2021 - Present</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">TechCorp Inc.</p>
+                        <p>Leading development of responsive web applications using modern JavaScript frameworks and
+                            implementing best practices for performance and accessibility.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <h4 class="text-xl font-medium">Frontend Developer</h4>
+                            <span class="text-sm text-gray-600 dark:text-gray-400">2018 - 2021</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">WebSolutions LLC</p>
+                        <p>Developed responsive interfaces and collaborated with design and backend teams to implement
+                            new features and optimize existing ones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">
+                My <span class="text-primary">Skills</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="fade-in delay-100">
+                    <h3 class="text-2xl font-semibold mb-6">Technical Skills</h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="h-2 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="progress-bar h-full bg-primary rounded-full" style="--progress-width: 95%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="h-2 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="progress-bar h-full bg-primary rounded-full" style="--progress-width: 90%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">React</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="h-2 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="progress-bar h-full bg-primary rounded-full" style="--progress-width: 85%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Node.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="h-2 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="progress-bar h-full bg-primary rounded-full" style="--progress-width: 80%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="h-2 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="progress-bar h-full bg-primary rounded-full" style="--progress-width: 75%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in delay-200">
+                    <h3 class="text-2xl font-semibold mb-6">Professional Skills</h3>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="flex flex-col items-center p-4 bg-white dark:bg-darkgray shadow-md rounded-lg hover:shadow-lg transition-shadow">
+                            <div
+                                class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-users text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold mb-1">Teamwork</h4>
+                            <div class="w-16 h-1 bg-primary rounded-full mb-2"></div>
+                            <p class="text-center text-sm">Excellent collaboration skills</p>
+                        </div>
+
+                        <div
+                            class="flex flex-col items-center p-4 bg-white dark:bg-darkgray shadow-md rounded-lg hover:shadow-lg transition-shadow">
+                            <div
+                                class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-lightbulb text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold mb-1">Creativity</h4>
+                            <div class="w-16 h-1 bg-primary rounded-full mb-2"></div>
+                            <p class="text-center text-sm">Innovative problem-solving</p>
+                        </div>
+
+                        <div
+                            class="flex flex-col items-center p-4 bg-white dark:bg-darkgray shadow-md rounded-lg hover:shadow-lg transition-shadow">
+                            <div
+                                class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-clock text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold mb-1">Time Management</h4>
+                            <div class="w-16 h-1 bg-primary rounded-full mb-2"></div>
+                            <p class="text-center text-sm">Efficient & organized</p>
+                        </div>
+
+                        <div
+                            class="flex flex-col items-center p-4 bg-white dark:bg-darkgray shadow-md rounded-lg hover:shadow-lg transition-shadow">
+                            <div
+                                class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-comments text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold mb-1">Communication</h4>
+                            <div class="w-16 h-1 bg-primary rounded-full mb-2"></div>
+                            <p class="text-center text-sm">Clear & effective</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-lightgray dark:bg-darkgray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">
+                My <span class="text-primary">Projects</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-dark rounded-lg shadow-lg overflow-hidden fade-in delay-100">
+                    <div class="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-5xl text-gray-400 dark:text-gray-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-commerce Website</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Fully responsive e-commerce platform with user authentication, product filtering, and
+                            payment integration.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">React</span>
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Node.js</span>
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">MongoDB</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-primary hover:underline">
+                                <i class="fas fa-link mr-1"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-primary hover:underline">
+                                <i class="fab fa-github mr-1"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-dark rounded-lg shadow-lg overflow-hidden fade-in delay-200">
+                    <div class="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-5xl text-gray-400 dark:text-gray-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Mobile-first task manager with drag-and-drop functionality, reminders, and categories.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Vue.js</span>
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Firebase</span>
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Tailwind</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-primary hover:underline">
+                                <i class="fas fa-link mr-1"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-primary hover:underline">
+                                <i class="fab fa-github mr-1"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-dark rounded-lg shadow-lg overflow-hidden fade-in delay-300">
+                    <div class="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-5xl text-gray-400 dark:text-gray-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Interactive data visualization dashboard with real-time updates and customizable widgets.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">React</span>
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">D3.js</span>
+                            <span
+                                class="px-2 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Express</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-primary hover:underline">
+                                <i class="fas fa-link mr-1"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-primary hover:underline">
+                                <i class="fab fa-github mr-1"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 fade-in delay-400">
+                <a href="#"
+                    class="px-6 py-3 bg-primary hover:bg-secondary text-white rounded-lg transition-colors inline-block">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">
+                Get In <span class="text-primary">Touch</span>
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2 fade-in delay-100">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium mb-1">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-400">yourname@example.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-phone text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium mb-1">Phone</h4>
+                                <p class="text-gray-600 dark:text-gray-400">+1 (123) 456-7890</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium mb-1">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-400">San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="text-lg font-medium mb-4">Connect With Me</h4>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="w-10 h-10 bg-primary hover:bg-secondary text-white rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary hover:bg-secondary text-white rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary hover:bg-secondary text-white rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary hover:bg-secondary text-white rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 fade-in delay-200">
+                    <h3 class="text-2xl font-semibold mb-6">Send a Message</h3>
+
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium mb-1">Full Name</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-darkgray focus:outline-none focus:ring-2 focus:ring-primary text-base"
+                                required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-darkgray focus:outline-none focus:ring-2 focus:ring-primary text-base"
+                                required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-darkgray focus:outline-none focus:ring-2 focus:ring-primary text-base">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-darkgray focus:outline-none focus:ring-2 focus:ring-primary text-base"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full px-6 py-3 bg-primary hover:bg-secondary text-white rounded-lg transition-colors text-base">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div id="form-success"
+                        class="hidden mt-4 p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-lg">
+                        Your message has been sent successfully!
+                    </div>
+
+                    <div id="form-error"
+                        class="hidden mt-4 p-4 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-lg">
+                        There was an error sending your message. Please try again.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-darkgray dark:bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg font-semibold">Your Name</p>
+                    <p class="text-sm opacity-75">Web Developer</p>
+                </div>
+
+                <div class="text-center mb-4 md:mb-0">
+                    <p class="text-sm opacity-75">© 2023 All Rights Reserved</p>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="#" class="opacity-75 hover:opacity-100 transition-opacity">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="opacity-75 hover:opacity-100 transition-opacity">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="opacity-75 hover:opacity-100 transition-opacity">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="opacity-75 hover:opacity-100 transition-opacity">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Typing effect for the hero section
+        const typingElement = document.querySelector('.typing-text');
+        const titles = ['Web Developer', 'UI/UX Designer', 'Full Stack Developer', 'Freelancer'];
+        let titleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingDelay = 100;
+
+        function typeEffect() {
+            const currentTitle = titles[titleIndex];
+
+            if (isDeleting) {
+                typingElement.textContent = currentTitle.substring(0, charIndex - 1);
+                charIndex--;
+                typingDelay = 50;
+            } else {
+                typingElement.textContent = currentTitle.substring(0, charIndex + 1);
+                charIndex++;
+                typingDelay = 150;
+            }
+
+            if (!isDeleting && charIndex === currentTitle.length) {
+                isDeleting = true;
+                typingDelay = 1500; // Pause at end of word
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                titleIndex = (titleIndex + 1) % titles.length;
+                typingDelay = 500; // Pause before starting new word
+            }
+
+            setTimeout(typeEffect, typingDelay);
+        }
+
+        // Start the typing effect
+        setTimeout(typeEffect, 1000);
+
+        // Scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        function checkScroll() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 50) {
+                    element.classList.add('appear');
+                }
+            });
+        }
+
+        // Initial check on page load
+        window.addEventListener('load', checkScroll);
+        // Check on scroll
+        window.addEventListener('scroll', checkScroll);
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+        const formError = document.getElementById('form-error');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Simulating form submission
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                // In a real application, you would send this data to a server
+                console.log({ name, email, subject, message });
+
+                // Show success message
+                formSuccess.classList.remove('hidden');
+                formError.classList.add('hidden');
+
+                // Reset form
+                contactForm.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formSuccess.classList.add('hidden');
+                }, 5000);
+            } else {
+                // Show error message
+                formError.classList.remove('hidden');
+                formSuccess.classList.add('hidden');
+
+                // Hide error message after 5 seconds
+                setTimeout(() => {
+                    formError.classList.add('hidden');
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+
+</html>

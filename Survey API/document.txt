@@ -1,0 +1,25 @@
+We'll build an API that allows users to submit a survey with:
+	. personal information (name, email)
+	. answers to multiple-choice questions
+	
+Step 1: setup spring boot project
+1. include dependencies:
+	. spring web
+	. spring data jpa
+	. mysql driver
+2. configure application.properties
+
+Step 2: define jpa entities
+1. SurveyUser.java – stores name and email
+2. Question.java – stores survey questions
+3. Answer.java – stores user responses
+
+Step 3: create repositories
+- public interface SurveyUserRepository extends JpaRepository<SurveyUser, Long> {}
+- public interface QuestionRepository extends JpaRepository<Question, Long> {}
+- public interface AnswerRepository extends JpaRepository<Answer, Long> {}
+
+Step 4: create dto for survey submission
+- public class SurveySubmissionDTO {}
+
+Step 5: create survey controller
