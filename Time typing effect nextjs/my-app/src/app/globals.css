@@ -1,0 +1,14 @@
+/* src/app/globals.css (custom) */
+.typing-text {
+  /* Style for the typing text */
+  font-weight: bold;
+  color: #007bff;
+  /* Example color */
+}
+
+.time-display {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  /* Example color */
+}
