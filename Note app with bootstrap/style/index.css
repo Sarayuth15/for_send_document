@@ -1,0 +1,11 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#editor {
+    height: 200px;
+}
+
+.note-card {
+    margin-bottom: 1rem;
+}
