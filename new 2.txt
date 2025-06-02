@@ -1,0 +1,66 @@
+- 수정했습니다. 올바른지 확인 부탁드립니다.					=> I have made the changes. Please verify if they are correct.
+
+- 수정했습니다, 확인부탁드립니다.							=> I have made the changes. Please check.
+
+- 확인했습니다											=> I have confirmed it
+
+- 확인 감사합니다.!										=> Thank you for the confirmation! (or checking)	
+
+- 완료했습니다. 확인 부탁드립니다							=> I have completed it. Please check
+
+- 부장님,  완료했습니다. 확인 부탁드립니다					=> Sir, it's complete. Please check
+
+- 주임님, 새로고침 후 재시도 부탁드립니다					=> Sir, please refresh and try again
+
+- 주임님, 네 감사합니다 									=> Sir, thank you
+
+- 네 확인했습니다 										=> yes i checked
+
+- 네, 알겠습니다											=> Yes, i understand
+
+- 테스트 했어요?											=> Did you test it?
+
+- 테스트 중입니다.										=> I'm testing it now.
+
+- 조수영 대리님, 네 확인하겠습니다.						=> Assistant manager Jo Su-young, yes, I'll check.
+
+- 부장님, 완료했습니다. 확인 부탁드립니다.					=> Manager, i have completed it. Please check it.
+
+- 네, 부장님 알겠습니다									=> Yes, Manager, I understand.
+
+- 부장님, 수정완료했습니다. 확인 부탁드립니다.				=> Boss, I'm done with the revisions. Please check them.
+
+- 부장님, 관련 소스 운영반영요청했습니다. 확인 부탁드립니다.	=> Boss, I've requested that the related source code be deployed. Please check it.
+
+- 수고하셨습니다											=> Thank you for your hard work.
+
+- 확인 주셔서 감사합니다. 이건 마지막 수정입니다.			=> Thank you for checking. this is the last modification.
+
+- 피드백 내용을 반영하였습니다.							=> The feedback has been reflected.
+
+
+
+
+===============================================================================================
+
+- https://flow.team/l/1R7td
+
+1일 일기 입니다.
+
+부장님, 하루 동안의 나의 일기입니다. 감사합니다.
+
+20250601_먼쓰레이닟_일기_01.docx
+
+짠러타_일기_20250601.docx
+
+
+오늘은 아침 일찍 일어났어요
+세수를 하고 아침을 먹었어요
+잘 자요
+
+- 저녁을 혼자 요리했어요. I cooked dinner by myself
+- 아이스 커피 라떼를 마셔요. I drink ice coffee latte
+- 저는 한국어를 배워요.  I learn korea
+- 저는 밤 10시에 한국어를 배워요. I learn Korean at 10 o'clock at night.
+- 저는 11시 30분에 잠을 자요. I go to sleep at 11:30
+- 저는 9시에 엄마에게 전화해요. I call my mom at 9 o'clock.

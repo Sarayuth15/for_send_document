@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text File Comparator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #5D5CDE;
+            --bg-light: #FFFFFF;
+            --bg-dark: #181818;
+            --text-light: #212529;
+            --text-dark: #ffffff;
+            --border-light: #dee2e6;
+            --border-dark: #495057;
+            --added-bg: #d4edda;
+            --removed-bg: #f8d7da;
+            --modified-bg: #fff3cd;
+            --added-bg-dark: #155724;
+            --removed-bg-dark: #721c24;
+            --modified-bg-dark: #856404;
+        }
+
+        .dark {
+            --bs-body-bg: var(--bg-dark);
+            --bs-body-color: var(--text-dark);
+            --bs-border-color: var(--border-dark);
+        }
+
+        body {
+            background-color: var(--bs-body-bg, var(--bg-light));
+            color: var(--bs-body-color, var(--text-light));
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .card {
+            background-color: var(--bs-body-bg, var(--bg-light));
+            border-color: var(--bs-border-color, var(--border-light));
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #4c4bc4;
+            border-color: #4c4bc4;
+        }
+
+        .text-area {
+            min-height: 300px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            resize: vertical;
+        }
+
+        .comparison-container {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .line-number {
+            display: inline-block;
+            width: 40px;
+            text-align: right;
+            padding-right: 10px;
+            color: #6c757d;
+            user-select: none;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+
+        .line-content {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .added {
+            background-color: var(--added-bg);
+            border-left: 4px solid #28a745;
+        }
+
+        .removed {
+            background-color: var(--removed-bg);
+            border-left: 4px solid #dc3545;
+        }
+
+        .modified {
+            background-color: var(--modified-bg);
+            border-left: 4px solid #ffc107;
+        }
+
+        .dark .added {
+            background-color: var(--added-bg-dark);
+            color: #d4edda;
+        }
+
+        .dark .removed {
+            background-color: var(--removed-bg-dark);
+            color: #f8d7da;
+        }
+
+        .dark .modified {
+            background-color: var(--modified-bg-dark);
+            color: #fff3cd;
+        }
+
+        .legend {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+        }
+
+        .file-upload-area {
+            border: 2px dashed var(--bs-border-color, var(--border-light));
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .file-upload-area:hover {
+            border-color: var(--primary-color);
+        }
+
+        .file-upload-area.dragover {
+            border-color: var(--primary-color);
+            background-color: rgba(93, 92, 222, 0.1);
+        }
+
+        .stats {
+            background-color: rgba(93, 92, 222, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-added {
+            background-color: #28a745;
+            color: white;
+            padding: 1px 2px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-removed {
+            background-color: #dc3545;
+            color: white;
+            padding: 1px 2px;
+            border-radius: 2px;
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+
+        .dark .highlight-added {
+            background-color: #20c997;
+            color: #000;
+        }
+
+        .dark .highlight-removed {
+            background-color: #e74c3c;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center mb-4">
+                    <h1 class="display-4 mb-3">
+                        <i class="fas fa-file-alt text-primary me-3"></i>
+                        Text File Comparator
+                    </h1>
+                    <p class="lead">Compare two text files and visualize the differences</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-file me-2"></i>
+                            File 1 (Original)
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="file-upload-area mb-3" id="upload1">
+                            <i class="fas fa-cloud-upload-alt fa-2x mb-2 text-primary"></i>
+                            <p class="mb-0">Click to select file or drag & drop</p>
+                            <input type="file" id="file1" accept=".txt,.csv,.json,.xml,.log" style="display: none;">
+                        </div>
+                        <textarea class="form-control text-area" id="text1"
+                            placeholder="Paste your first text here or upload a file..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-file me-2"></i>
+                            File 2 (Comparison)
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="file-upload-area mb-3" id="upload2">
+                            <i class="fas fa-cloud-upload-alt fa-2x mb-2 text-primary"></i>
+                            <p class="mb-0">Click to select file or drag & drop</p>
+                            <input type="file" id="file2" accept=".txt,.csv,.json,.xml,.log" style="display: none;">
+                        </div>
+                        <textarea class="form-control text-area" id="text2"
+                            placeholder="Paste your second text here or upload a file..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <button class="btn btn-primary btn-lg" id="compareBtn">
+                    <i class="fas fa-exchange-alt me-2"></i>
+                    Compare Files
+                </button>
+                <button class="btn btn-outline-secondary btn-lg ms-2" id="clearBtn">
+                    <i class="fas fa-trash me-2"></i>
+                    Clear All
+                </button>
+            </div>
+        </div>
+
+        <div id="results" style="display: none;">
+            <div class="stats" id="statsContainer">
+                <!-- Stats will be inserted here -->
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color"
+                        style="background-color: var(--added-bg); border-left: 4px solid #28a745;"></div>
+                    <span>Added Lines</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color"
+                        style="background-color: var(--removed-bg); border-left: 4px solid #dc3545;"></div>
+                    <span>Removed Lines</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color"
+                        style="background-color: var(--modified-bg); border-left: 4px solid #ffc107;"></div>
+                    <span>Modified Lines</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="mb-0">File 1 (Original)</h6>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="comparison-container" id="comparison1">
+                                <!-- Comparison content will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="mb-0">File 2 (Comparison)</h6>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="comparison-container" id="comparison2">
+                                <!-- Comparison content will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        $(document).ready(function () {
+            // File upload functionality
+            function setupFileUpload(uploadId, fileId, textId) {
+                const uploadArea = $(`#${uploadId}`);
+                const fileInput = $(`#${fileId}`);
+                const textArea = $(`#${textId}`);
+
+                uploadArea.on('click', function () {
+                    fileInput.click();
+                });
+
+                fileInput.on('change', function (e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            textArea.val(e.target.result);
+                        };
+                        reader.readAsText(file);
+                    }
+                });
+
+                // Drag and drop
+                uploadArea.on('dragover', function (e) {
+                    e.preventDefault();
+                    $(this).addClass('dragover');
+                });
+
+                uploadArea.on('dragleave', function (e) {
+                    e.preventDefault();
+                    $(this).removeClass('dragover');
+                });
+
+                uploadArea.on('drop', function (e) {
+                    e.preventDefault();
+                    $(this).removeClass('dragover');
+
+                    const files = e.originalEvent.dataTransfer.files;
+                    if (files.length > 0) {
+                        const file = files[0];
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            textArea.val(e.target.result);
+                        };
+                        reader.readAsText(file);
+                    }
+                });
+            }
+
+            setupFileUpload('upload1', 'file1', 'text1');
+            setupFileUpload('upload2', 'file2', 'text2');
+
+            // Compare functionality
+            $('#compareBtn').on('click', function () {
+                const text1 = $('#text1').val();
+                const text2 = $('#text2').val();
+
+                if (!text1.trim() || !text2.trim()) {
+                    alert('Please enter or upload text in both files before comparing.');
+                    return;
+                }
+
+                compareTexts(text1, text2);
+            });
+
+            // Clear functionality
+            $('#clearBtn').on('click', function () {
+                $('#text1').val('');
+                $('#text2').val('');
+                $('#results').hide();
+                $('#file1').val('');
+                $('#file2').val('');
+            });
+
+            function compareTexts(text1, text2) {
+                const lines1 = text1.split('\n');
+                const lines2 = text2.split('\n');
+
+                const comparison = getLineDifferences(lines1, lines2);
+                displayComparison(comparison);
+
+                // Show results
+                $('#results').show();
+
+                // Scroll to results
+                $('html, body').animate({
+                    scrollTop: $('#results').offset().top - 50
+                }, 500);
+            }
+
+            function getLineDifferences(lines1, lines2) {
+                const maxLines = Math.max(lines1.length, lines2.length);
+                const result = {
+                    left: [],
+                    right: [],
+                    stats: {
+                        added: 0,
+                        removed: 0,
+                        modified: 0,
+                        unchanged: 0
+                    }
+                };
+
+                for (let i = 0; i < maxLines; i++) {
+                    const line1 = lines1[i] || '';
+                    const line2 = lines2[i] || '';
+
+                    let status = 'unchanged';
+                    let highlightedLine1 = line1;
+                    let highlightedLine2 = line2;
+
+                    if (line1 === '' && line2 !== '') {
+                        status = 'added';
+                        result.stats.added++;
+                        highlightedLine2 = `<span class="highlight-added">${escapeHtml(line2)}</span>`;
+                    } else if (line1 !== '' && line2 === '') {
+                        status = 'removed';
+                        result.stats.removed++;
+                        highlightedLine1 = `<span class="highlight-removed">${escapeHtml(line1)}</span>`;
+                    } else if (line1 !== line2) {
+                        status = 'modified';
+                        result.stats.modified++;
+                        const diff = getCharacterDiff(line1, line2);
+                        highlightedLine1 = diff.left;
+                        highlightedLine2 = diff.right;
+                    } else {
+                        result.stats.unchanged++;
+                        highlightedLine1 = escapeHtml(line1);
+                        highlightedLine2 = escapeHtml(line2);
+                    }
+
+                    result.left.push({
+                        line: line1,
+                        highlightedLine: highlightedLine1,
+                        number: i + 1,
+                        status: status === 'added' ? 'empty' : status
+                    });
+
+                    result.right.push({
+                        line: line2,
+                        highlightedLine: highlightedLine2,
+                        number: i + 1,
+                        status: status === 'removed' ? 'empty' : status
+                    });
+                }
+
+                return result;
+            }
+
+            function getCharacterDiff(str1, str2) {
+                const diff = computeDiff(str1, str2);
+                let left = '';
+                let right = '';
+
+                for (let i = 0; i < diff.length; i++) {
+                    const item = diff[i];
+
+                    if (item.type === 'equal') {
+                        const escaped = escapeHtml(item.value);
+                        left += escaped;
+                        right += escaped;
+                    } else if (item.type === 'delete') {
+                        left += `<span class="highlight-removed">${escapeHtml(item.value)}</span>`;
+                    } else if (item.type === 'insert') {
+                        right += `<span class="highlight-added">${escapeHtml(item.value)}</span>`;
+                    }
+                }
+
+                return { left, right };
+            }
+
+            function computeDiff(str1, str2) {
+                const len1 = str1.length;
+                const len2 = str2.length;
+                const dp = Array(len1 + 1).fill().map(() => Array(len2 + 1).fill(0));
+
+                // Build the LCS table
+                for (let i = 1; i <= len1; i++) {
+                    for (let j = 1; j <= len2; j++) {
+                        if (str1[i - 1] === str2[j - 1]) {
+                            dp[i][j] = dp[i - 1][j - 1] + 1;
+                        } else {
+                            dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                        }
+                    }
+                }
+
+                // Backtrack to find the diff
+                const diff = [];
+                let i = len1, j = len2;
+
+                while (i > 0 || j > 0) {
+                    if (i > 0 && j > 0 && str1[i - 1] === str2[j - 1]) {
+                        diff.unshift({ type: 'equal', value: str1[i - 1] });
+                        i--;
+                        j--;
+                    } else if (i > 0 && (j === 0 || dp[i - 1][j] >= dp[i][j - 1])) {
+                        diff.unshift({ type: 'delete', value: str1[i - 1] });
+                        i--;
+                    } else {
+                        diff.unshift({ type: 'insert', value: str2[j - 1] });
+                        j--;
+                    }
+                }
+
+                return diff;
+            }
+
+            function displayComparison(comparison) {
+                // Display stats
+                const stats = comparison.stats;
+                const totalChanges = stats.added + stats.removed + stats.modified;
+                const totalLines = stats.added + stats.removed + stats.modified + stats.unchanged;
+
+                $('#statsContainer').html(`
+                    <div class="row text-center">
+                        <div class="col-md-2 col-6">
+                            <div class="h4 text-success">${stats.added}</div>
+                            <div class="small">Added</div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="h4 text-danger">${stats.removed}</div>
+                            <div class="small">Removed</div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="h4 text-warning">${stats.modified}</div>
+                            <div class="small">Modified</div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="h4 text-muted">${stats.unchanged}</div>
+                            <div class="small">Unchanged</div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="h4 text-primary">${totalChanges}</div>
+                            <div class="small">Total Changes</div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="h4">${totalLines}</div>
+                            <div class="small">Total Lines</div>
+                        </div>
+                    </div>
+                `);
+
+                // Display comparisons
+                displaySide('comparison1', comparison.left);
+                displaySide('comparison2', comparison.right);
+            }
+
+            function displaySide(containerId, lines) {
+                const container = $(`#${containerId}`);
+                let html = '';
+
+                lines.forEach(function (lineObj) {
+                    if (lineObj.status === 'empty') {
+                        html += `<div class="p-2 border-bottom">
+                            <span class="line-number">${lineObj.number}</span>
+                            <span class="line-content text-muted">— (empty line)</span>
+                        </div>`;
+                    } else {
+                        const statusClass = lineObj.status !== 'unchanged' ? lineObj.status : '';
+                        html += `<div class="p-2 border-bottom ${statusClass}">
+                            <span class="line-number">${lineObj.number}</span>
+                            <span class="line-content">${lineObj.highlightedLine || '&nbsp;'}</span>
+                        </div>`;
+                    }
+                });
+
+                container.html(html);
+            }
+
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        });
+    </script>
+</body>
+
+</html>
