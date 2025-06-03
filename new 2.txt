@@ -1,57 +1,11 @@
-- 수정했습니다. 올바른지 확인 부탁드립니다.					=> I have made the changes. Please verify if they are correct.
-
-- 수정했습니다, 확인부탁드립니다.							=> I have made the changes. Please check.
-
-- 확인했습니다											=> I have confirmed it
-
-- 확인 감사합니다.!										=> Thank you for the confirmation! (or checking)	
-
-- 완료했습니다. 확인 부탁드립니다							=> I have completed it. Please check
-
-- 부장님,  완료했습니다. 확인 부탁드립니다					=> Sir, it's complete. Please check
-
-- 주임님, 새로고침 후 재시도 부탁드립니다					=> Sir, please refresh and try again
-
-- 주임님, 네 감사합니다 									=> Sir, thank you
-
-- 네 확인했습니다 										=> yes i checked
-
-- 네, 알겠습니다											=> Yes, i understand
-
-- 테스트 했어요?											=> Did you test it?
-
-- 테스트 중입니다.										=> I'm testing it now.
-
-- 조수영 대리님, 네 확인하겠습니다.						=> Assistant manager Jo Su-young, yes, I'll check.
-
-- 부장님, 완료했습니다. 확인 부탁드립니다.					=> Manager, i have completed it. Please check it.
-
-- 네, 부장님 알겠습니다									=> Yes, Manager, I understand.
-
-- 부장님, 수정완료했습니다. 확인 부탁드립니다.				=> Boss, I'm done with the revisions. Please check them.
-
-- 부장님, 관련 소스 운영반영요청했습니다. 확인 부탁드립니다.	=> Boss, I've requested that the related source code be deployed. Please check it.
-
-- 수고하셨습니다											=> Thank you for your hard work.
-
-- 확인 주셔서 감사합니다. 이건 마지막 수정입니다.			=> Thank you for checking. this is the last modification.
-
-- 피드백 내용을 반영하였습니다.							=> The feedback has been reflected.
-
-
-
-
-===============================================================================================
-
-- https://flow.team/l/1R7td
+# link flow for this project
+	- https://flow.team/l/1R7td
 
 1일 일기 입니다.
 
-부장님, 하루 동안의 나의 일기입니다. 감사합니다.
+부장님, 하루 동안의 나의 일기입니다. 감사합니다.	=> his is my diary for a day. Thank you.
 
-20250601_먼쓰레이닟_일기_01.docx
-
-짠러타_일기_20250601.docx
+사라윳_일기_20250603
 
 
 오늘은 아침 일찍 일어났어요
@@ -64,3 +18,107 @@
 - 저는 밤 10시에 한국어를 배워요. I learn Korean at 10 o'clock at night.
 - 저는 11시 30분에 잠을 자요. I go to sleep at 11:30
 - 저는 9시에 엄마에게 전화해요. I call my mom at 9 o'clock.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+저는 보통 아침 6시 30분에 일어납니다.
+
+저는 매일 아침 7시에 일어나요
+
+안녕하십니까? Hello how are you?
+
+이름: 엑 서러윳
+
+제 일상 생활: My daily life
+
+
+집에서 회사까지 15분 걸려요. It takes 15 minutes from home to work.
+
+가는 길에 나는 많은 사람들을 만났다. On the way i met many people.
+
+가는 길에 차가 많아요. There are a lot of cars on the way.
+
+길에 커피숍이 많이 있어요. There are a lot of coffee shops on the street
+
+저는 메가커피를 좋아해요. I like Mega Coffee
+
+아이스 라떼를 좋아해요. I like iced latte.
+
+사무실에 도착하면 상사에게 ‘좋은 아침입니다’라고 인사해요. When I get to the office, I say 'good morning' to my boss
+
+제출일: 2025-06-03. Submission Date: 2025-06-03
+
+7시 45분에 회사에 도착했어요. I arrived at the company at 7:45.
+
+제 회사 이름은 비즈플레이이고, 부서 이름은 B2E복지사업센터입니다. My company name is Bizplay and my department name is B2E Welfare Business Center.
+
+저는 제 일을 사랑해요. I love my job
+
+사무실에 도착하면 할 일을 확인해요. When I get to the office, I check what I have to do
+
+그리고 간식을 먹어요. And I eat some snacks
+
+9시에 회사 20층에서 커피를 마셔요. At 9 o’clock, I drink coffee on the 20th floor of my company
+
+저희 회사에는 '위카페'라는 커피숍이 있습니다. My company has a coffee shop called WeCaffee
+
+한 잔에 1,000원이에요. One cup costs 1000 won
+
+우리 부서에서는 Java, JSP, SQL, HTML, CSS, JavaScript, jQuery 등의 프로그래밍 언어를 사용해요. My department uses programming languages Java, JSP, SQL, HTML, CSS, JavaScript, and jQuery
+
+Jexframe은 우리 회사의 프레임워크입니다. Jexframe is my company’s framework.
+
+11시 30분에 점심시간 휴식을 해요.
+
+가끔 집에서 가져온 음식을 먹고, 가끔은 식당에서 먹어요 
+
+저는 한국 음식을 좋아해요
+
+점심 식사 후에 저는 한국어를 더 공부해요.
+
+저는 기본 한국어 문법을 배워요
+
+1시에 다시 일하러 가요
+
+제 책상 위에 데스크탑 3대, 모니터 2대, 키보드 2개가 있어요
+
+첫 번째는 코딩용이고, 두 번째는 회사 업무용이며, 세 번째는 연구용입니다 One is for coding, two is for company work, and three is for research
+
+저는 15층에서 근무합니다. I work on the 15th floor
+
+일하는 동안 제 사무실은 아주 조용해요.
+
+그리고 제 사무실에는 마실 수 있는 따뜻한 물과 차가운 물이 있어요. And in my office, there is hot water and cold water for drinking
+
+업무 중에 소통이나 채팅을 위해 저는 Flow 앱(플로우 앱) 을 사용해요.
+
+Flow 앱은 제 회사에서 개발했어요. My company developed the Flow app
+
+오후 6시에는 집에 돌아갈 시간이예요. At 6:00 p.m., it's time to go back home.
+
+오늘 저녁을 만들기 위해 마트에 갔어요. Today, I went to the mart to buy food for making dinner.
+
+저는 돼지고기와 채소를 샀어요. I have bought pork and vegetables.
+
+마트가 저희 회사 근처에 있습니다. The mart is near my company
+
+저는 저 혼자 저녁을 만들어요. I make dinner by myself
+
+저는 저녁을 먹고 나서 오후 10시에 혼자 한국어 공부를 시작해요. After dinner, at 10 p.m., I start to learn Korean by myself.
+
+저는 책, 유튜브, 웹사이트를 통해 공부해요. I learn through books, YouTube, and websites.
+
+그리고 11시 30분에 샤워하고 잠자리에 들어요. And I take a shower at 11:30 and go to bed.
+
+내일 일해야 해서 일찍 자요. I go to bed early because I have work tomorrow
+
+잘 자요!😊. Good night! 😊
+
+감사합니다 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+- 화요일에 친구랑 타임스퀘어 몰에 갔어요. I went to Times Square Mall with my friend on Tuesday.
+
+- "7명" (일곱 명)
