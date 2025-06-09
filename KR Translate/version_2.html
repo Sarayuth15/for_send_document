@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean to English Translator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Custom styles for better aesthetics */
+        .container {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            /* Allow vertical resizing */
+        }
+
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #3b82f6;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="p-4">
+    <div class="container bg-white p-8 rounded-xl shadow-lg w-full max-w-2xl">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Korean to English Translator</h1>
+
+        <div class="mb-6">
+            <label for="koreanInput" class="block text-gray-700 text-sm font-medium mb-2">Enter Korean Text:</label>
+            <textarea id="koreanInput" rows="6"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out"
+                placeholder="안녕하세요! 한국어를 영어로 번역해보세요."></textarea>
+        </div>
+
+        <div class="flex justify-center mb-6">
+            <button id="translateButton"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex items-center justify-center">
+                <span id="buttonText">Translate</span>
+                <div id="loadingSpinner" class="loading-spinner ml-3 hidden"></div>
+            </button>
+        </div>
+
+        <div>
+            <label for="englishOutput" class="block text-gray-700 text-sm font-medium mb-2">Translated English
+                Text:</label>
+            <textarea id="englishOutput" rows="6" readonly
+                class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800 focus:outline-none"></textarea>
+        </div>
+
+        <!-- Message Box for user feedback (instead of alert) -->
+        <div id="messageBox"
+            class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 hidden">
+            <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+                <p id="messageText" class="text-gray-800 text-lg mb-4"></p>
+                <button id="closeMessageBox"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Function to show custom message box
+            function showMessageBox(message) {
+                $('#messageText').text(message);
+                $('#messageBox').removeClass('hidden');
+            }
+
+            // Function to hide custom message box
+            $('#closeMessageBox').on('click', function () {
+                $('#messageBox').addClass('hidden');
+            });
+
+            $('#translateButton').on('click', async function () {
+                const koreanText = $('#koreanInput').val().trim();
+                const $translateButton = $(this);
+                const $buttonText = $('#buttonText');
+                const $loadingSpinner = $('#loadingSpinner');
+                const $englishOutput = $('#englishOutput');
+
+                if (koreanText === "") {
+                    showMessageBox("Please enter some Korean text to translate.");
+                    return;
+                }
+
+                // Show loading indicator and disable button
+                $buttonText.text('Translating...');
+                $loadingSpinner.removeClass('hidden');
+                $translateButton.prop('disabled', true).addClass('opacity-70 cursor-not-allowed');
+                $englishOutput.val(''); // Clear previous output
+
+                try {
+                    // Gemini API key is automatically provided by the Canvas environment
+                    const apiKey = "AIzaSyDlsTNRHY2SzsyQbApyaswKDIknRNoqECw";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                    let chatHistory = [];
+                    chatHistory.push({
+                        role: "user",
+                        parts: [{
+                            text: `Translate the following Korean text to English: ${koreanText}`
+                        }]
+                    });
+
+                    const payload = {
+                        contents: chatHistory
+                    };
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(`API error: ${response.status} ${response.statusText} - ${errorData.error.message || 'Unknown error'}`);
+                    }
+
+                    const result = await response.json();
+
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const translatedText = result.candidates[0].content.parts[0].text;
+                        $englishOutput.val(translatedText);
+                    } else {
+                        showMessageBox("Translation failed: No valid response from API.");
+                        console.error("API response structure unexpected:", result);
+                    }
+
+                } catch (error) {
+                    showMessageBox("An error occurred during translation. Please try again.");
+                    console.error("Translation error:", error);
+                } finally {
+                    // Hide loading indicator and re-enable button
+                    $buttonText.text('Translate');
+                    $loadingSpinner.addClass('hidden');
+                    $translateButton.prop('disabled', false).removeClass('opacity-70 cursor-not-allowed');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
