@@ -1,0 +1,49 @@
+.tab-active {
+    border-bottom: 2px solid #5D5CDE;
+    color: #5D5CDE;
+}
+
+.dark .tab-active {
+    border-bottom: 2px solid #8281FF;
+    color: #8281FF;
+}
+
+.json-key {
+    color: #5D5CDE;
+}
+
+.dark .json-key {
+    color: #8281FF;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.dark table th,
+.dark table td {
+    border: 1px solid #444;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.dark table th {
+    background-color: #333;
+    color: #eee;
+}
