@@ -1,6 +1,3 @@
-# link flow for this project
-	- https://flow.team/l/1R7td
-	
 # Style write 
 
 	조진연 부장님
@@ -9,9 +6,9 @@
 	확인해주세요.
 	감사합니다~~~
 
-부장님, 하루 동안의 나의 일기입니다. 감사합니다.	=> his is my diary for a day. Thank you.
+	부장님, 하루 동안의 나의 일기입니다. 감사합니다.	=> his is my diary for a day. Thank you.
 
-사라윳_일기_20250603
+	사라윳_일기_20250603
 
 
 오늘은 아침 일찍 일어났어요
@@ -21,9 +18,7 @@
 - 저녁을 혼자 요리했어요. I cooked dinner by myself
 - 아이스 커피 라떼를 마셔요. I drink ice coffee latte
 - 저는 한국어를 배워요.  I learn korea
-- 저는 밤 10시에 한국어를 배워요. I learn Korean at 10 o'clock at night.
-- 저는 11시 30분에 잠을 자요. I go to sleep at 11:30
-- 저는 9시에 엄마에게 전화해요. I call my mom at 9 o'clock.
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -39,85 +34,8 @@
 제 일상 생활: My daily life
 
 
-집에서 회사까지 15분 걸려요. It takes 15 minutes from home to work.
-
-가는 길에 나는 많은 사람들을 만났다. On the way i met many people.
-
-가는 길에 차가 많아요. There are a lot of cars on the way.
-
-길에 커피숍이 많이 있어요. There are a lot of coffee shops on the street
-
-저는 메가커피를 좋아해요. I like Mega Coffee
-
-아이스 라떼를 좋아해요. I like iced latte.
-
-사무실에 도착하면 상사에게 ‘좋은 아침입니다’라고 인사해요. When I get to the office, I say 'good morning' to my boss
-
-제출일: 2025-06-03. Submission Date: 2025-06-03
-
-7시 45분에 회사에 도착했어요. I arrived at the company at 7:45.
-
-제 회사 이름은 비즈플레이이고, 부서 이름은 B2E복지사업센터입니다. My company name is Bizplay and my department name is B2E Welfare Business Center.
-
 저는 제 일을 사랑해요. I love my job
 
-사무실에 도착하면 할 일을 확인해요. When I get to the office, I check what I have to do
-
-그리고 간식을 먹어요. And I eat some snacks
-
-9시에 회사 20층에서 커피를 마셔요. At 9 o’clock, I drink coffee on the 20th floor of my company
-
-저희 회사에는 '위카페'라는 커피숍이 있습니다. My company has a coffee shop called WeCaffee
-
-한 잔에 1,000원이에요. One cup costs 1000 won
-
-우리 부서에서는 Java, JSP, SQL, HTML, CSS, JavaScript, jQuery 등의 프로그래밍 언어를 사용해요. My department uses programming languages Java, JSP, SQL, HTML, CSS, JavaScript, and jQuery
-
-Jexframe은 우리 회사의 프레임워크입니다. Jexframe is my company’s framework.
-
-11시 30분에 점심시간 휴식을 해요.
-
-가끔 집에서 가져온 음식을 먹고, 가끔은 식당에서 먹어요 
-
-저는 한국 음식을 좋아해요
-
-점심 식사 후에 저는 한국어를 더 공부해요.
-
-저는 기본 한국어 문법을 배워요
-
-1시에 다시 일하러 가요
-
-제 책상 위에 데스크탑 3대, 모니터 2대, 키보드 2개가 있어요
-
-첫 번째는 코딩용이고, 두 번째는 회사 업무용이며, 세 번째는 연구용입니다 One is for coding, two is for company work, and three is for research
-
-저는 15층에서 근무합니다. I work on the 15th floor
-
-일하는 동안 제 사무실은 아주 조용해요.
-
-그리고 제 사무실에는 마실 수 있는 따뜻한 물과 차가운 물이 있어요. And in my office, there is hot water and cold water for drinking
-
-업무 중에 소통이나 채팅을 위해 저는 Flow 앱(플로우 앱) 을 사용해요.
-
-Flow 앱은 제 회사에서 개발했어요. My company developed the Flow app
-
-오후 6시에는 집에 돌아갈 시간이예요. At 6:00 p.m., it's time to go back home.
-
-오늘 저녁을 만들기 위해 마트에 갔어요. Today, I went to the mart to buy food for making dinner.
-
-저는 돼지고기와 채소를 샀어요. I have bought pork and vegetables.
-
-마트가 저희 회사 근처에 있습니다. The mart is near my company
-
-저는 저 혼자 저녁을 만들어요. I make dinner by myself
-
-저는 저녁을 먹고 나서 오후 10시에 혼자 한국어 공부를 시작해요. After dinner, at 10 p.m., I start to learn Korean by myself.
-
-저는 책, 유튜브, 웹사이트를 통해 공부해요. I learn through books, YouTube, and websites.
-
-그리고 11시 30분에 샤워하고 잠자리에 들어요. And I take a shower at 11:30 and go to bed.
-
-내일 일해야 해서 일찍 자요. I go to bed early because I have work tomorrow
 
 잘 자요!😊. Good night! 😊
 
@@ -125,85 +43,8 @@ Flow 앱은 제 회사에서 개발했어요. My company developed the Flow app
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-# new 
-
-- 안녕하세요, 오늘은 수요일입니다. Hello, today is wednesday
-
-- 오늘은 수요일입니다. Today is Wednesday
-
-- 저는 오늘 6시 45분에 일어났습니다. Today i got up at 6:45
-
-- 저는 제 방을 수리했습니다. I repaired my room
-
-- 그리고 저는 화장실에 갔습니다. And i went to the bathroom.
-
-- 저는 이를 닦았습니다. I brushed my teeth.
-
-- 그리고 얼굴을 씻습니다. And i wash my face
-
-- 저는 옷을 입었어요. I wore clothes
-
-- 오늘 저는 완다, 모니로앗, 위미은, 다라소위따와 함께 회사까지 걸어갔습니다. Today, I walked to work with Wanda, Moniroat, Wimiun, and Dara So Tata.
-
-- 15분쯤 걸렸어요. It took about 15 minutes
-
-- 오늘 저는 7시 38분에 회사에 도착했습니다. Today, i arrived at the company at 7:38.
-
-- 그오전에는 사무실 도착해서 바로 플로우 프로젝트에서 업무를 확인하고. In the morning, i arrived at the office and checked my work in the flow project
-
-- 그리고 저는 Flow 프로젝트에 보고서를 올렸습니다. And I posted my report in the Flow project.
-
-- 9시 30분에 부장님께서 저를 위카페룸으로 부르시고 제 일일 보고서를 확인하셨습니다. At 9:30, the department manager called me to the We Café room and checked my daily report.
-
-- 저는 부장님께 새로운 단어를 배웠습니다. I learned a new word from my 부장님
-
-- 그리고 부장님께서 저에게 커피를 사주셨습니다. And my 부장님 bought me a coffee.
-
-- 오늘 저는 카페라떼를 마셨습니다. Today i drank a cafe latte.
-
-- 카페라떼는 제가 가장 좋아하는 음료입니다. Café latte is my favorite
-
-- 그리고 저는 바나나를 먹었습니다. And i ate banana
-
-- 저는 집에서 바나나를 가져왔습니다. I took the banana from home.
-
-- 그리고 오늘 저는 혼자 점심을 먹었습니다. And today i ate lunch alone.
-
-- 저는 식당에서 식사했습니다. I ate at a restaurant.
-
-- 제가 먹은 음식은 잔차(생면) 국수라고 합니다. The food that I ate is called 잔차 (fresh noodles) 국수.
-
-- 아주 맛있고 정말 좋았습니다. It was very nice and delicious.
-
-- 그 후에 저는 사무실로 돌아갔습니다. After that, I went back to my office.
-
-- 그리고 12시 20분에 저는 한국어 온라인 수업을 들었습니다. And at 12:20, I had a Korean online class.
-
-- 1시에 저는 일을 시작했습니다.
-
-- 오늘 저는 식당에서 저녁을 먹었습니다. 
-
-- 세 사람과 함께요. With 3 people
-
-- 저는 저녁 식사에 9,000원을 썼습니다. I spent 9000 won for dinner
-
-- 여기 식당 이름입니다: 영등포 샤브로21. Here is the name of the restaurant: SHABURO 21, Yeongdeungpo.
-
-- 집에 돌아왔을 때 아이스 그린티를 샀습니다. When I got back home, I bought iced green tea.
-
-- 집에 도착했을 때 페이스북을 했습니다. When I arrived home, I played Facebook.
-
-- 9시 정각에 노트북을 켰습니다. At 9:00 o’clock, I opened my laptop.
-
-- 그리고 저는 혼자서 한국어를 공부합니다. And I learn Korean by myself.
-
-- 저는 유튜브와 웹사이트를 통해 한국어를 배웁니다. I learn korea through YouTube and websites.
-
-- 그리고 밤 11시에 샤워를 했습니다. Then I took a shower at 11 p.m.
-
-- 그리고 11시 30분에 잠자리에 들었습니다. And I went to bed at 11:30.
-
-- 저의 저녁 식사. My dinner
 
 
-- good night
+
+
+
