@@ -1,0 +1,93 @@
+****************** 자기소개 (Self-Introduction)
+
+-	제 자기소개
+	My self-introduction
+	
+-	안녕하십니까?
+	Hello. or How do you do?
+	
+-	제 이름은 EK SARAYUTH였고, 웹 개발자였습니다. 저는 25살이었고 캄보디아 출신이었습니다.
+	My name is EK SARAYUTH, and I am a web developer. I am 25 years old and from Cambodia.
+	
+-	저는 프놈펜에 살았고, 제 가족은 할머니, 아버지, 어머니, 누나 그리고 저를 포함해 다섯 명이었습니다.
+	I live in Phnom Penh, and my family has 5 members: grandma, father, mother, older sister, and me.
+	
+-	저는 러씨꺼(Russey Keo) 고등학교에서 공부했습니다.
+
+-	AEU 대학교에서 컴퓨터공학을 전공으로 학사 학위를 마쳤습니다. 2023년부터는 KSHRD (Korea Software HRD Center)에서 10기 수강생으로 교육을 받았습니다.
+	I completed my bachelor's degree in computer engineering at AEU University. Since 2023, I have been training as a member of the 10th class at KSHRD (Korea Software HRD Center).
+
+-	KSHRD에서 기본 과정을 수료했습니다. 기본 과정에서는 한국어, 자바, 웹디자인, 자바스크립트, 리액트 JS 프레임워크, 버전 관리(Git), PostgreSQL 데이터베이스, UX/UI 디자인을 배웠습니다. KSHRD에서 좋은 추억이 있었습니다.
+	I completed the Basic Course at KSHRD. In the basic course, I studied Korean language, Java, web design, JavaScript, the React.js framework, version control with Git, PostgreSQL database, and UX/UI design. I have good memories from my time at KSHRD.
+	
+-	저는 웹 개발 과목을 좋아했습니다. 왜냐하면 HTML 코드를 작성하고 컴파일하면, 웹 브라우저에서 결과를 바로 볼 수 있었기 때문입니다.
+	I loved the subject of web development because when I wrote HTML code and compiled it, I could see the result in the web browser.
+	
+-	5개월 후에 기본 과정의 마지막 프로젝트를 진행했습니다. 저희 팀은 5명으로 구성되었고, 프로젝트 이름은 KSHRD Registration이었습니다. 프론트엔드는 React.js, 백엔드는 Spring Boot, 데이터베이스는 PostgreSQL을 사용했습니다.
+	After 5 months, I had a final project in the basic course. My team had 5 members, and the name of our project was KSHRD Registration. For the frontend, I used React.js; for the backend, I used Spring Boot; and for the database, I used PostgreSQL.
+
+-	KSHRD 센터에 감사드립니다.
+	I would like to thank the KSHRD Center.
+
+-	기본 과정을 졸업한 후, KOSIGN (KOSIGN (Cambodia) Investment Co., Ltd.)에 입사했습니다. KOSIGN의 B2B R&D 팀에서 웹 개발자로 커리어를 시작했습니다.
+	After graduating from the basic course, I joined KOSIGN (KOSIGN (Cambodia) Investment Co., Ltd.). I started my career as a web developer at KOSIGN, in the B2B R&D team.
+	
+-	저희 팀은 Card Report, We MBA Vietnam, We Bill 365와 같은 외주 프로젝트를 개발했습니다.
+	My team developed outsourcing projects such as Card Report, We MBA Vietnam, and We Bill 365.
+	
+-	제가 팀에서 처음으로 참여한 프로젝트는 Card Report였습니다.
+	The first project I worked on in my team was called Card Report.
+	
+-	저희 팀은 JexFramework를 사용했습니다.
+	My team used JexFramework.
+	
+-	현재 저는 한국에 있는 Bizplay의 B2E 복지사업센터에서 근무하고 있습니다.
+	I am currently working in the B2E Welfare Business Center at Bizplay in South Korea.
+	
+-	2025년 1월 19일에 처음으로 한국에 왔습니다. 겨울이라서 정말 신났고, 처음으로 먹은 음식은 김치찌개였습니다.
+	On January 19, 2025, I came to South Korea for the first time. I felt really excited because it was winter, and the first food I ate was called Kimchi Jjigae.
+	
+-	5개월 동안 부산에 살았고, 그 후 서울로 옮겼습니다.
+	I lived in Busan for 5 months and then moved to Seoul.
+
+-	부산에 있는 동안 해운대 해수욕장, 부산타워, 남포동에 가봤습니다.
+	While I was in Busan, I visited Haeundae Beach, Busan Tower, and Nampo.
+	
+-	서울에서는 경복궁, 남산타워, 명동, 올림픽공원, 한강, 타임스퀘어(Times Square) 몰, 롯데월드타워에 가봤습니다.
+	In Seoul, I visited Gyeongbokgung Palace, Namsan Tower, Myeong-dong, Olympic Park, Han River, Times Square Mall, and Lotte World Tower.
+	
+-	주말에는 커피숍에 가서 한국어를 공부하고 컴퓨터, 휴대폰, 태블릿, 스마트워치, 게임 같은 새로운 기술을 보는 것을 좋아했습니다.
+	On the weekends, I liked going to coffee shops to study Korean and watch videos about new technology such as computers, phones, tablets, smartwatches, and games.
+	
+-	제 취미는 코딩, 영화와 유튜브 시청, 음악 감상, 게임하기였습니다.
+	My hobbies were coding, watching movies and YouTube, listening to music, and playing games.
+	
+-	저는 새로운 기술을 계속 배우고 스스로를 발전시켜 나갔습니다.
+	I continued to learn new technologies and kept myself updated.
+	
+-	제 이야기를 들어주셔서 감사합니다.
+	Thank you for listening to my story.
+
+	
+
+
+
+****************** Q&A
+
+Q.	Why do you want to become an Web developer?
+A.	HTML 코드를 작성하고 브라우저에서 결과를 보는 것이 즐거워서 웹 개발자가 되고 싶었습니다.
+
+Q.	KSHRD에서 어떤 공부를 했어요?
+	What did you study at KSHRD?
+
+A.	Java, 웹디자인, Spring 프레임워크, Git, 데이터베이스, UX/UI 디자인, 그리고 배포와 같은 기본 기술들을 배웠습니다.
+	I learned basic technologies such as Java, web design, Spring framework, Git, database, UX/UI design, and deployment.
+	
+Q.	졸업한 후에 어떤 일을 했어요?
+	What did you do after graduation?
+	
+A.	저는 KOSIGN에서 웹 개발자로 일했습니다.
+	I worked as a web developer at KOSIGN.
+
+Q.	지금 사용하는 기술은 어떤 것이 있어요? 
+	What technologies are you currently using?
