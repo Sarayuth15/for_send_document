@@ -1,0 +1,71 @@
+- 안녕하십니까? 제 이름은 엑 사라윳 입니다.
+  Hello, my name is Ek Sarayuth.
+  
+- 저는 25살이며, 캄보디아 프놈펜에서 자랐습니다.
+  I am 25 years old and I grew up in Phnom Penh, Cambodia.
+  
+- 제 가족은 할머니, 아버지, 어머니, 누나 그리고 저를 포함해서 다섯명 입니다.
+  My family consists of five members: my grandmother, my father, my mother, my older sister, and me.
+  
+- 저는 AEU 대학교에서 컴퓨터 공학을 전공했습니다. 
+  I majored in Computer Engineering at AEU University.
+  
+- HRD 센터에서 한국어, 자바, 웹디자인, 자바스크립트, 리액트, Git, PostgreSQL, UX/UI 디자인을 배웠습니다. 
+  At the HRD Center, I learned Korean, Java, web design, JavaScript, React, Git, PostgreSQL, and UX/UI design.
+  
+- 거기서 많은 친구들을 만났고, 축구 경기와 파티를 하며 즐겁게 지냈습니다.
+  There, I met many friends and had a great time playing soccer matches and enjoying parties.
+  
+- 5개월 동안의 과정을 마치고, 5명이 한팀으로, 마지막 프로젝트를 진행했습니다.
+  After completing the 5-month course, we formed a team of five members and carried out our final project together.
+  
+- 프론트엔드는 React.js, 백엔드는 Spring Boot, 데이터베이스는 PostgreSQL을 사용했습니다.
+  For the frontend, we used React.js; for the backend, we used Spring Boot; and for the database, we used PostgreSQL.
+  
+- 프로젝트에서 저는 소개 영상을 제작하고, 관리자 대시보드의 UX/UI를 디자인했습니다.
+  In the project, I created the introduction video and designed the UX/UI for the admin dashboard.
+  
+- 이 프로젝트는 학생들이 HRD센터에 정보를 등록하는 것이었습니다.
+  This project was about allowing students to register their information at the HRD Center.
+  
+- HRD 센터 덕분에 개발자로 일하게 되었습니다.  정말 감사드립니다. ^^
+  Thanks to the HRD Center, I was able to work as a developer. I’m truly grateful. ^^
+  
+- 기본 과정을 졸업한 후, 코사인에서 비투비 알앤디 팀에서 웹 개발자로 일하게 되었습니다. 처음으로 참여한 프로젝트는 카드 보고서였습니다.
+  After graduating from the basic course, I started working as a web developer in the B2B R&D team at KOSIGN. The first project I participated in was the Card Report.
+  
+- 현재 저는 한국에 있는 비즈플레이의 비투이 복지사업센터에서 근무하고 있습니다.
+  I am currently working at the B2E Welfare Business Center of Bizplay in Korea.
+
+- 2025년 1월 19일에 처음으로 한국에 왔습니다. 
+  I came to Korea for the first time on January 19, 2025.
+
+- 겨울이라서 정말 신났고, 처음으로 먹은 음식은 김치찌개였습니다.
+  Since it was winter, I was really excited, and the first food I ate was kimchi stew.
+
+- 5개월 동안 부산에 있었고, 그 후 서울로 왔습니다.
+  I stayed in Busan for five months, and after that, I came to Seoul.
+
+- 부산에 있는 동안 해운대 해수욕장, 부산타워, 남포동에 갔습니다.
+  While I was in Busan, I visited Haeundae Beach, Busan Tower, and Nampo-dong.
+
+- 해운대 해변에서 친구와 함께 서브웨이 햄버거를 먹었고, 풍경이 너무 아름다워서 사진을 많이 찍었습니다.
+  At Haeundae Beach, I ate a Subway ham sandwich with my friend, and because the scenery was so beautiful, we took many photos.
+
+- 벽화 마을도 가고, 커피도 마시고 십원빵도 먹었습니다.
+  I also visited the mural village, drank coffee, and ate ten-won bread.
+
+- 서울에서는 경복궁, 남산타워, 명동, 올림픽공원, 한강, 타임스퀘어, 롯데타워에 갔습니다. 
+  In Seoul, I visited Gyeongbokgung Palace, Namsan Tower, Myeongdong, Olympic Park, the Han River, Times Square, and Lotte Tower.
+
+- 주말에는 커피숍에 가서 한국어를 공부하고, 컴퓨터, 스마트폰, 태블릿, 스마트워치, 게임 같은 최신 기술을 보러 타임스퀘어의 일렉트로마켓에 갑니다. 
+  On weekends, I go to coffee shops to study Korean, and I visit the Electromart in Times Square to check out the latest technologies like computers, smartphones, tablets, smartwatches, and games.
+
+- 제 취미는 코딩, 영화와 유튜브 시청, 음악 감상, 게임하기 입니다. 
+  My hobbies are coding, watching movies and YouTube, listening to music, and playing games.
+
+- 저는 새로운 기술을 계속 배우고 스스로를 발전시켜 나가겠습니다. 
+  I will continue to learn new technologies and keep improving myself.
+
+- 제 이야기를 들어주셔서 감사합니다.^^	
+  Thank you for listening to my story. ^^
