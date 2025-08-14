@@ -1,0 +1,24 @@
+****************** Q&A
+
+Q.	Why do you want to become an Web developer?
+A.	HTML 코드를 작성하고 브라우저에서 결과를 보는 것이 즐거워서 웹 개발자가 되고 싶었습니다.
+
+Q.	KSHRD에서 어떤 공부를 했어요?
+	What did you study at KSHRD?
+
+A.	Java, 웹디자인, Spring 프레임워크, Git, 데이터베이스, UX/UI 디자인, 그리고 배포와 같은 기본 기술들을 배웠습니다.
+	I learned basic technologies such as Java, web design, Spring framework, Git, database, UX/UI design, and deployment.
+	
+Q.	졸업한 후에 어떤 일을 했어요?
+	What did you do after graduation?
+	
+A.	저는 KOSIGN에서 웹 개발자로 일했습니다.
+	I worked as a web developer at KOSIGN.
+
+Q.	지금 사용하는 기술은 어떤 것이 있어요? 
+	What technologies are you currently using?
+
+Q.	K-Specialist를 진행하면서 무엇을 기대하시나요?
+
+Q.	왜 한국에 오고 싶나요? (តើអ្វីជាហេតុផលដែលអ្នកចង់មកប្រទេសកូរ៉េ?)
+	
