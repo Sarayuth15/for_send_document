@@ -1,0 +1,71 @@
+1.	이름이 무엇인가요? (What is your name?)
+A.	제 이름은 엑 사라윳 입니다.
+
+2.	몇 살이에요? (How old are you?)
+A.	저는 25살입니다.
+
+3.	어디에서 자랐나요? (Where did you grow up?)
+A.	저는 캄보디아 프놈펜에서 자랐습니다.
+
+4.	가족이 몇 명이고, 누구인가요?
+A.	제 가족은 할머니, 아버지, 어머니, 누나 그리고 저를 포함해서 다섯명입니다. (There are five people in my family including my grandmother, father, mother, older sister and me.)
+
+5.	AEU 대학교에서 전공이 무엇이었나요? (What did you major in at AEU University?)
+A.	저는 컴퓨터 공학을 전공했습니다.
+
+6.	HRD 센터에서 무엇을 배웠나요? (What did you learn at the HRD Center?)
+A.	HRD 센터에서 여러 가지 개발 언어를 배웠습니다. (ខ្ញុំបានរៀនភាសាកម្មវិធីជាច្រើននៅមជ្ឈមណ្ឌល HRD)
+
+7.	HRD 센터에서 친구들과 어떤 활동을 즐겼나요? (What activities did you enjoy with friends at the HRD Center?)
+A.	축구 경기와 파티를 하며 즐겁게 지냈습니다. (ខ្ញុំបានសប្បាយរីករាយ ពេលលេងបាល់ទាត់ និងចូលរួមក្នុងកម្មវិធី party)
+
+8.	HRD 센터 과정은 얼마나 되었나요? (How long was the HRD Center course?)
+A.	5개월 동안의 과정이었습니다. (It was a five-month course.)
+
+9.	마지막 프로젝트에서 팀이 어떤 기술을 사용했나요? (What technologies did your team use in the final project?)
+A.	프론트엔드는 React.js, 백엔드는 Spring Boot, 데이터베이스는 PostgreSQL을 사용했습니다.
+
+10.	프로젝트에서 당신의 역할은 무엇이었나요? (What was your role in the project?)
+A.	저는 소개 영상과 관리자 대시보드를 만들었습니다.
+
+11.	졸업 후 어디에서 일했나요? (After graduation, where did you work?)
+A.	코사인에서 비투비 R&D 팀에서 웹 개발자로 일했습니다. (I worked as a web developer in the B2B R&D team at KOSIGN)
+
+12.	코사인에서 처음 참여한 프로젝트는 무엇이었나요? (What was your first project at Cosign?)
+A.	카드 보고서 프로젝트였습니다.
+
+13.	처음 한국에 온 날은 언제인가요? (When did you come to Korea for the first time?)
+A.	2025년 1월 19일입니다.
+
+14.	처음 먹은 한국 음식은 무엇이었나요? (What was the first Korean food you ate?)
+A.	김치찌개였습니다. (It was 김치찌개)
+
+15.	부산에서 얼마나 있었나요? (How long did you stay in Busan?)
+A.	5개월 동안 있었습니다. (I was there for five months)
+
+16.	부산에서 어디를 방문했나요? (Which places did you visit in Busan?)
+A.	해운대 해수욕장, 부산타워, 남포동에 갔습니다. (I went to Haeundae Beach, Busan Tower, and Nampo-dong.)	
+
+17.	서울에서 어디를 방문했나요? (Which places have you visited in Seoul?)
+A.	경복궁, 남산타워, 명동, 올림픽공원, 한강, 타임스퀘어, 롯데타워에 갔습니다.
+
+18.	주말에 주로 무엇을 하나요? (What do you usually do on weekends?)
+A.	커피숍에 가서 한국어를 공부하고, 최신 기술을 보러 일렉트로마켓에 갑니다. (I go to a coffee shop to study Korean, and then I go to the Electromart to see the latest technology)
+
+19.	취미가 무엇인가요? (What are your hobbies?)
+A.	코딩, 영화와 유튜브 시청, 음악 감상, 게임하기입니다. (Coding, watching movies and YouTube, listening to music, and playing games)
+
+20.	앞으로의 목표는 무엇인가요? (What is your goal for the future?)
+A.	새로운 기술을 계속 배우고 스스로를 발전시키는 것입니다. (It is about continuously learning new technologies and improving myself)
+
+
+
+
+
+
+
+
+
+
+
+

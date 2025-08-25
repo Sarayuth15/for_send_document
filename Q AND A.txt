@@ -1,24 +1,40 @@
 ****************** Q&A
 
-Q.	Why do you want to become an Web developer?
-A.	HTML 코드를 작성하고 브라우저에서 결과를 보는 것이 즐거워서 웹 개발자가 되고 싶었습니다.
+-	저는 현재 식권복지 근무하고 있습니다.
+	I am currently working at 식권복지.
 
-Q.	KSHRD에서 어떤 공부를 했어요?
-	What did you study at KSHRD?
+Q.	왜 한국에 오고 싶나요? (តើអ្វីជាហេតុផលដែលអ្នកចង់មកប្រទេសកូរ៉េ?)
+A.	저는 새로운 기술을 배우고 싶었습니다. (I wanted to learn new technology.)
+A.	저는 한국 사람들과 함께 일하고 싶었습니다. (I wanted to work with Korean people.)
 
+Q.	K-Specialist를 진행하면서 무엇을 기대하시나요? (What do you expect while participating in K-Specialist? តើអ្នករំពឹងអ្វីខ្លះ នៅពេលចូលរួមក្នុងកម្មវិធី K-Specialist?)
+A.	저는 한국어를 읽을 수 있었고, 새로운 단어를 배웠으며, 한국어 문법을 이해했습니다. (I can read Korean, learn new words, and understand Korean grammar.)
+
+Q.	KSHRD에서 어떤 공부를 했어요? (What did you study at KSHRD?)
 A.	Java, 웹디자인, Spring 프레임워크, Git, 데이터베이스, UX/UI 디자인, 그리고 배포와 같은 기본 기술들을 배웠습니다.
 	I learned basic technologies such as Java, web design, Spring framework, Git, database, UX/UI design, and deployment.
 	
-Q.	졸업한 후에 어떤 일을 했어요?
-	What did you do after graduation?
-	
+Q.	졸업한 후에 어떤 일을 했어요? (What did you do after graduation?)
 A.	저는 KOSIGN에서 웹 개발자로 일했습니다.
 	I worked as a web developer at KOSIGN.
 
 Q.	지금 사용하는 기술은 어떤 것이 있어요? 
 	What technologies are you currently using?
+A.	저는 Jex Framework 사용했습니다.
 
-Q.	K-Specialist를 진행하면서 무엇을 기대하시나요?
+Q.	어떤 음식을 좋아요? (What food do you like?)
+A.	저는 김치찌개를 좋아했어요.
 
-Q.	왜 한국에 오고 싶나요? (តើអ្វីជាហេតុផលដែលអ្នកចង់មកប្រទេសកូរ៉េ?)
+Q.	퇴근하고 나서 뭐 해요?	(What do you do after work?)
+A.	퇴근 후에 회사 근처 식당에 가요.	(After work i go to restaurant near my company.)
+
+Q.	주말에 뭐 했어요? (What did you do on weekend?)
+A.	주말에 저는 커피숍에 가서 한국어를 공부하고 새로운 기술을 연구했습니다. (ចុងសប្ដាហ៍ ខ្ញុំបានទៅហាងកាហ្វេ សិក្សាភាសាកូរ៉េ និងស្រាវជ្រាវបច្ចេកវិទ្យាថ្មីៗ)
+
+Q.	Why do you want to become an Web developer?
+A.	HTML 코드를 작성하고 브라우저에서 결과를 보는 것이 즐거워서 웹 개발자가 되고 싶었습니다.
+
+
+
+
 	
