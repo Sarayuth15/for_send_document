@@ -7,10 +7,14 @@
 -	저는 캄보디아에서 온 파커입니다.
 	I am 파커 from Cambodia.
 	
--	2022년에 프놈펜 대학교에서 컴퓨터 과학을 전공하고 졸업했습니다.
-	In 2022, I majored in Computer Science and graduated from Phnom Penh University.
+-	2019년에 AEU 대학교에서 컴퓨터공학을 전공하고 졸업했습니다.
+	In 2019, I majored in Computer Science and graduated from AEU University.
 	
 -	그리고 2022년 한국 소프트웨어 HRD 센터에서 장학금을 받았습니다.
 	And in 2022, I received a scholarship from the Korea Software HRD Center.
 	
--	
+-	현재 한국의 비즈플레이라는 회사에서 B2E복지사업센터 부서의 웹 개발자로 일하고 있습니다.
+	I am currently working as a web developer in the B2E Welfare Business Center department at a company called Bizplay in Korea.
+	
+-	Jex3 framework, Spring, Java, React.js, Next.js 등 여러 기술을 사용해본 경험이 있습니다.
+	I have experience using various technologies Jex3 framework, Spring, Java, React.js, Next.js.
